@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 03:28:52 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/05 03:49:54 by cben-bar         ###   ########lyon.fr   */
+/*   Updated: 2022/01/05 04:46:44 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	int		tab[256] = {0};
 	char	*s1;
 	char	*s2;
-	
+
 	if (argc == 3)
 	{
 		s1 = argv[1];
