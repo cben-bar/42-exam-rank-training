@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 23:36:19 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/05 02:06:29 by cben-bar         ###   ########lyon.fr   */
+/*   Updated: 2022/01/05 04:45:56 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int			main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		i;
 	char	*s1;
