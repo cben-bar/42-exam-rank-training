@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 23:36:19 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/05 04:45:56 by cben-bar         ###   ########lyon.fr   */
+/*   Updated: 2022/01/14 00:07:53 by cben-bar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	main(int argc, char **argv)
 		s2 = argv[2];
 		while (s1[i])
 		{
-			if (tab[s1[i]] == 0)
+			if (tab[(int)s1[i]] == 0)
 			{
 				ft_putchar(s1[i]);
-				tab[s1[i]] = 1;
+				tab[(int)s1[i]] = 1;
 			}
 			i++;
 		}
@@ -44,7 +44,7 @@ int	main(int argc, char **argv)
 			if (tab[(int)s2[i]] == 0)
 			{
 				ft_putchar(s2[i]);
-				tab[s2[i]] = 1;
+				tab[(int)s2[i]] = 1;
 			}
 			i++;
 		}
