@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 23:53:17 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/17 01:03:17 by cben-bar         ###   ########.fr       */
+/*   Updated: 2022/01/17 01:41:29 by cben-bar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,6 +176,7 @@ int	main(void)
 	{
 		gnlmoicabb = get_next_line(fd);
 		printf("%s", gnlmoicabb);
+		free(gnlmoicabb);
 		x++;
 	}
 }
