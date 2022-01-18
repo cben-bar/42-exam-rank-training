@@ -6,15 +6,15 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 06:20:32 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/17 17:16:12 by cben-bar         ###   ########.fr       */
+/*   Updated: 2022/01/18 15:15:10 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <limits.h>
-#include "includes/ft_printf.h"
+#include "./includes/ft_printf2.h"
 
-int	main()
+int	main(void)
 {
 	char *str = "coucou";
 	int ret1 = ft_printf("coucou %c %s %p %d %i %u %x %X %%\n", 'G', str, str, INT_MIN, INT_MAX, UINT_MAX, INT_MAX, UINT_MAX);
