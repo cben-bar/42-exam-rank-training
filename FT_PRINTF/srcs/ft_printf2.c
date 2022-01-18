@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 23:47:27 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/17 23:56:34 by cben-bar         ###   ########.fr       */
+/*   Updated: 2022/01/18 12:54:04 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_check_format(va_list args, char c)
 	else if (c == 'd')
 		return (ft_printnbr(va_arg(args, int), 1)); 
 	else if (c == 'x')
-		return (ft_printhexnbr(va_arg(args, unsigned int)));
+		return (ft_printhexnbr(va_arg(args, unsigned int), 1, "0123456789abcdef"));
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:10:25 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/17 22:19:40 by cben-bar         ###   ########.fr       */
+/*   Updated: 2022/01/18 12:53:25 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int	ft_printstr(char *str);
 int	ft_printaddr(void *add, size_t printed);
 int	ft_printnbr(int nb, size_t printed);
 int	ft_printunsnbr(unsigned int nb, size_t printed);
-int	ft_printhexnbr(unsigned int nb);
+int	ft_printhexnbr(unsigned int nb, size_t printed, char *base);
 
 #endif
