@@ -6,7 +6,7 @@
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:33:28 by cben-bar          #+#    #+#             */
-/*   Updated: 2022/01/18 18:48:15 by cben-bar         ###   ########lyon.fr   */
+/*   Updated: 2022/06/26 14:59:00 by cben-bar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,6 +171,7 @@ int	main(void)
 	printf("retor = %d\n", retor);
 
 	printf("\n");
+
 	printf("==test d==");
 	
 	printf("\n");
@@ -216,6 +217,7 @@ int	main(void)
 	printf("retor = %d\n", retor);
 	
 	printf("\n");
+
 	printf("==test x==");
 	
 	printf("\n");
