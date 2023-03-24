@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   microshell.c                                       :+:      :+:    :+:   */
+/*   mic.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cben-bar <cben-bar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:15:17 by shackbei          #+#    #+#             */
-/*   Updated: 2023/03/15 15:41:05 by cben-bar         ###   ########.fr       */
+/*   Updated: 2023/03/22 15:01:08 by cben-bar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int argc, char *argv[], char *env[])
 			if (i != 2)
 				ft_putstr_fd2("error: cd: bad arguments", NULL);
 			else if (chdir(argv[1]) != 0)
-				ft_putstr_fd2("error: cd: cannot change directory to ", argv[1]	);
+				ft_putstr_fd2("error: cd: cannot change directory to ", argv[1]);
 		}
 		else if (i != 0 && (argv[i] == NULL || strcmp(argv[i], ";") == 0)) //exec in stdout
 		{

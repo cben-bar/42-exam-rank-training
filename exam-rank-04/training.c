@@ -1,6 +1,6 @@
 #include <string.h>
-#include <unistd.h>
 #include <sys/wait.h>
+#include <unistd.h>
 
 int	write_error(char *s, char *argv)
 {
@@ -13,16 +13,16 @@ int	write_error(char *s, char *argv)
 	return (1);
 }
 
-int	ft_exe(char **argv, int i, int tmp_fd, char **env)
+int	ft_exec(char **argv, int i, int tmp_fd, char **env)
 {
 	argv[i] = NULL;
 	dup2(tmp_fd, STDIN_FILENO);
 	close(tmp_fd);
 	execve(argv[0], argv, env);
-	return (write_error("error: cannot execute ", argv[0]));
+	return (write_error("error; cannot execute: ", argv[0]));
 }
 
-int	main(int argc, char **argv, char **env)
+int main(int argc, char **argv, char **env)
 {
 	int	i;
 	int fd[2];
@@ -40,34 +40,34 @@ int	main(int argc, char **argv, char **env)
 		if (strcmp(argv[0], "cd") == 0)
 		{
 			if (i != 2)
-				write_error("error: cd: bad arguments", NULL);
+				write_error("error: cd: bad argument", NULL);
 			else if (chdir(argv[1]) != 0)
-				write_error("error: cd: cannot change directory to ", argv[1]);
+				write_error("error: cd: cannot change directory to: ", argv[1]);
 		}
 		else if (i != 0 && (argv[i] == NULL || strcmp(argv[i], ";") == 0))
 		{
-			if ( fork() == 0)
+			if (fork() == 0)
 			{
-				if (ft_exe(argv, i, tmp_fd, env))
+				if (ft_exec(argv, i, tmp_fd, env))
 					return (1);
 			}
 			else
 			{
 				close(tmp_fd);
-				while(waitpid(-1, NULL, WUNTRACED) != -1)
+				while (waitpid(-1, NULL, WUNTRACED) != -1)
 					;
 				tmp_fd = dup(STDIN_FILENO);
 			}
 		}
-		else if(i != 0 && strcmp(argv[i], "|") == 0)
+		else if (i != 0 && strcmp(argv[i], "|") == 0)
 		{
 			pipe(fd);
-			if ( fork() == 0)
+			if (fork() == 0)
 			{
 				dup2(fd[1], STDOUT_FILENO);
 				close(fd[0]);
 				close(fd[1]);
-				if (ft_exe(argv, i, tmp_fd, env))
+				if (ft_exec(argv, i, tmp_fd, env))
 					return (1);
 			}
 			else
@@ -79,5 +79,5 @@ int	main(int argc, char **argv, char **env)
 		}
 	}
 	close(tmp_fd);
-	return (0);
+	return(0);
 }
