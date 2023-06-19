@@ -45,3 +45,21 @@ void	Warlock::introduce() const
 {
 	std::cout << _name << ": I am " << _name << ", " << _title << "!" << std::endl;
 }
+
+void Warlock::learnSpell(ASpell* spell)
+{
+	if (spell)
+		_SpellBook[spell->getName()] = spell;
+}
+
+void Warlock::forgetSpell(std::string SpellName)
+{
+	if (_SpellBook.find(SpellName) != _SpellBook.end())
+		_SpellBook.erase(_SpellBook.find(SpellName));
+}
+
+void Warlock::launchSpell(std::string SpellName, ATarget & target)
+{
+	if (_SpellBook.find(SpellName) != _SpellBook.end())
+		_SpellBook[SpellName]->launch(target);
+}
