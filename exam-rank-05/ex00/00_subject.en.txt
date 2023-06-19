@@ -1,0 +1,163 @@
+Assignment name  : cpp_module00
+Expected files   : Warlock.cpp Warlock.hpp
+--------------------------------------------------------------------------------
+
+Make a Warlock class. It has to be in Coplien's form.
+
+It has the following private attributes :
+* name (string)
+* title (string)
+
+Since they're private, you will write the following getters :
+* getName, returns a reference to constant string
+* getTitle, returns a reference to constant string
+
+Both these functions will have to be callable on a constant Warlock.
+
+Create the following setter: 
+* setTitle, returns void and takes a reference to constant string
+
+Your Warlock will also have, in addition to whatever's required by Coplien's
+form, a constructor that takes, in this order, its name and title. Your Warlock
+will not be able to be copied, instantiated by copy, or instantiated without a
+name and a title.
+
+For example :
+
+Warlock bob;                            //Does not compile
+Warlock bob("Bob", "the magnificent");  //Compiles
+Warlock jim("Jim", "the nauseating");   //Compiles
+bob = jim;                              //Does not compile
+Warlock jack(jim);                      //Does not compile
+
+Upon creation, the Warlock says :
+
+<NAME>: This looks like another boring day.
+
+Of course, whenever we use placeholders like <NAME>, <TITLE>, etc...
+in outputs, you will replace them by the appropriate value. Without the < and >.
+
+When he dies, he says:
+
+<NAME>: My job here is done!
+
+Our Warlock must also be able to introduce himself, while boasting with all its
+might.
+
+So you will write the following function:
+* void introduce() const;
+
+It must display:
+
+<NAME>: I am <NAME>, <TITLE>!
+
+Here's an example of a test main function and its associated output:
+
+int main()
+{
+  Warlock const richard("Richard", "Mistress of Magma");
+  richard.introduce();
+  std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+
+  Warlock* jack = new Warlock("Jack", "the Long");
+  jack->introduce();
+  jack->setTitle("the Mighty");
+  jack->introduce();
+
+  delete jack;
+
+  return (0);
+}
+
+~$ ./a.out | cat -e
+Richard: This looks like another boring day.$
+Richard: I am Richard, Mistress of Magma!$
+Richard - Mistress of Magma$
+Jack: This looks like another boring day.$
+Jack: I am Jack, the Long!$
+Jack: I am Jack, the Mighty!$
+Jack: My job here is done!$
+Richard: My job here is done!$
+~$
+
+
+
+
+
+
+Créez une classe Démoniste. Il doit être sous la forme de Coplien.
+
+Il a les attributs privés suivants :
+* nom (chaîne)
+* titre (chaîne)
+
+Puisqu'ils sont privés, vous allez écrire les getters suivants :
+* getName, renvoie une référence à une chaîne constante
+* getTitle, renvoie une référence à une chaîne constante
+
+Ces deux fonctions devront pouvoir être appelées sur un Warlock constant.
+
+Créez le setter suivant :
+* setTitle, renvoie void et prend une référence à une chaîne constante
+
+Votre Warlock aura également, en plus de tout ce qui est requis par Coplien's
+form, un constructeur qui prend, dans cet ordre, son nom et son titre. Votre sorcier
+ne pourra pas être copié, instancié par copie ou instancié sans
+nom et un titre.
+
+Par exemple :
+
+bob démoniste; //Ne compile pas
+Démoniste bob("Bob", "le magnifique"); // Compile
+Démoniste Jim("Jim", "le nauséabond"); // Compile
+bob = jim; //Ne compile pas
+Démoniste jack (jim); //Ne compile pas
+
+Lors de la création, l'Arcaniste dit :
+
+<NOM> : Cela ressemble à une autre journée ennuyeuse.
+
+Bien sûr, chaque fois que nous utilisons des espaces réservés comme <NAME>, <TITLE>, etc...
+dans les sorties, vous les remplacerez par la valeur appropriée. Sans les < et >.
+
+Quand il meurt, il dit :
+
+<NOM> : Mon travail ici est terminé !
+
+Notre Warlock doit également être capable de se présenter, tout en se vantant de tous ses
+pourrait.
+
+Vous allez donc écrire la fonction suivante :
+* void introduit() const ;
+
+Il doit afficher :
+
+<NAME> : Je suis <NAME>, <TITLE> !
+
+Voici un exemple de fonction principale de test et de sa sortie associée :
+
+int main()
+{
+   Démoniste const richard("Richard", "Maîtresse de Magma");
+   richard.introduire();
+   std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+
+   Warlock* jack = new Warlock("Jack", "the Long");
+   jack->introduire();
+   jack->setTitle("le Puissant");
+   jack->introduire();
+
+   supprimer jack ;
+
+   retour (0);
+}
+
+~$ ./a.out | chat -e
+Richard : Cela ressemble à une autre journée ennuyeuse.$
+Richard : Je suis Richard, Maîtresse de Magma !$
+Richard - Maîtresse de Magma$
+Jack : Cela ressemble à une autre journée ennuyeuse.$
+Jack : Je suis Jack, le Long !$
+Jack : Je suis Jack, le Puissant !$
+Jack : Mon travail ici est terminé !$
+Richard : Mon travail ici est terminé !$
